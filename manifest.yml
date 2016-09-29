@@ -1,0 +1,13 @@
+---
+applications:
+- name: cloud-native-spring
+  random-route: true
+  memory: 1G
+  instances: 1
+  path: ./target/cloudnativespringworkshop-0.0.1-SNAPSHOT.jar
+  timeout: 180 # to give time for the data to import
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+  services:
+  - service-registry
+  - config-server

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: cloud-native-spring
+
+security:
+  basic:
+    enabled:  false
+
+cloud:
+  services:
+    registrationMethod: route
